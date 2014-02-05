@@ -56,7 +56,7 @@ def page_index_factory(language_code):
         pub_date = indexes.DateTimeField(model_attr='publication_date', null=True)
         login_required = indexes.BooleanField(model_attr='login_required')
         url = indexes.CharField(stored=True, indexed=False, model_attr='get_absolute_url')
-        title = indexes.CharField(stored=True, indexed=False, model_attr='get_title', boost=1.1)
+        title = indexes.CharField(stored=True, indexed=False, model_attr='get_title', boost=1.2)
         site_id = indexes.IntegerField(stored=True, indexed=True, model_attr='site_id')
 
         def prepare(self, obj):
